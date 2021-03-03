@@ -1,0 +1,41 @@
+ALGORITHM  len-words-vowels​
+
+VAR​
+
+sent: STRING​;
+len: INTEGER;
+Nb: INTEGER​
+i: INTEGER​
+
+BEGIN​
+
+Write (" Write a sentence which ends with a point : ") ​;
+
+Read sent​;
+
+/* number of caracters  */
+len:=0;
+len:= len(sent); 
+Write ( "This sentence has:", len, "caracters" ​);
+
+/* number of words  */
+
+Nb:= 0; ​
+FOR (i= 1 to len(sent))
+IF Mid(sent, i , 1) := " " ) Then​
+Nb:= Nb + 1 ;
+END_IF;
+END_FOR;
+Write ("This sentence has: »", Nb + 1, " words"​);
+
+/* number of vowels */
+FOR (i= 1 to Len(sent)) ​
+IF ( Mid(sent, i, 1) = "a" or Mid(sent, i, 1) = "e" or Mid(sent, i, 1) = "i" or Mid(sent, i, 1) = "o" or Mid(sent, i, 1) = "u" or Mid(sent, i, 1) = "y" ) Then
+Nb :=Nb + 1 ​;
+END_IF;
+END_FOR;
+Write ( "This sentence has:", Nb, " vowels" ​);
+
+END​
+
+​
